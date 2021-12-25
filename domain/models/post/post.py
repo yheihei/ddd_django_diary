@@ -15,6 +15,10 @@ class Post:
         return False
 
     @property
+    def id(self) -> PostId:
+        return self.__post_id
+
+    @property
     def title(self) -> PostTitle:
         return self.__post_title
 

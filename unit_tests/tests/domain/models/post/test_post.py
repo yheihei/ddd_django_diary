@@ -19,6 +19,7 @@ class TestPost(TestCase):
             PostBody('body2'),
         )
         self.assertEqual(True, post_1 == post_2)
+        self.assertEqual(True, post_1.id == post_2.id)
 
     def test_2(self):
         '''タイトルを変更できること'''
@@ -47,4 +48,3 @@ class TestPost(TestCase):
             True,
             post_1.body == PostBody('body1 modified')
         )
-
